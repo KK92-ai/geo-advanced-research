@@ -169,11 +169,11 @@ Product Image → Feature Extraction
 └── Similar product embedding → Vector similarity search
 ```
 ```markdown
-# Visual Search Flow: Deep Dive
 
-Let me break down this process even further because it powers visual shopping on platforms like ChatGPT's shopping integration and Google Lens. 
+# Visual Search Flow: 
 
-## Visual Search Flow:
+Let me break down this process even further because it powers visual shopping on platforms like ChatGPT's shopping integration and Google Lens.
+
 
 ```
 User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
