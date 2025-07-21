@@ -173,7 +173,7 @@ Product Image → Feature Extraction
 
 Let me break down this process even further because it powers visual shopping on platforms like ChatGPT's shopping integration and Google Lens.
 
-#### **Visual Search Flow**:
+#### Visual Search Flow:
 
 User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
 
