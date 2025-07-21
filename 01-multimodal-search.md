@@ -178,7 +178,7 @@ Let me break down this process even further because it powers visual shopping on
 
 User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
 
-**Step 1 Pre-processing**:
+Step 1 Pre-processing:
 
 Raw Image (2MB, 3000x4000px) →
 ├── Resize to 512x512 (standard for most models)
@@ -187,7 +187,7 @@ Raw Image (2MB, 3000x4000px) →
 ├── Auto-rotate if needed
 └── Enhance contrast/brightness if too dark
 
-**Step 2 Feature Extraction**
+Step 2 Feature Extraction
 
 P1 Colour Histogram Analysis
 
@@ -342,7 +342,7 @@ So this is how the flow works
 
 Total: ~600ms from upload to results
 
-#### Basic playbook for image based brand discovery:
+#### Basic Techniques - Image based Brand Discovery:
 
 1. Optimize Your Product Images
 - Bad: Single angle, poor lighting, cluttered background
@@ -380,7 +380,7 @@ Indian Fashion Context:
 - Occasion mapping (mehendi, sangeet)
 - Regional style variations
 
-Advanced practices
+#### Advanced Techniques - Image based Brand Discovery
 
 1. Multi-Image Product Understanding (Instead of Single Image)
 
