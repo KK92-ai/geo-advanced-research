@@ -409,6 +409,8 @@ In visual search, the image IS the query. Every pixel carries information that c
  
 The better your visual feature optimization, the more findable your products become in this new paradigm.
 
+## Next Section
+
 **Case Study: Myntra and ChatGPT**
 
 - Myntra launched a ChatGPT‑powered assistant called MyFashionGPT in May 2023. 
