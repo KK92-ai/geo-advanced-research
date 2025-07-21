@@ -168,7 +168,6 @@ Product Image → Feature Extraction
 ├── Style classification
 └── Similar product embedding → Vector similarity search
 ```
-```markdown
 
 # Visual Search Flow: 
 
