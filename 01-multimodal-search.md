@@ -190,16 +190,17 @@ Raw Image (2MB, 3000x4000px) →
 Step 2 Feature Extraction
 
 P1 Colour Histogram Analysis
-
+```
 Image → Divide into color channels (R,G,B) →
 ├── Count pixels in each color range
 ├── Create distribution graph
 ├── Identify dominant colors (top 3-5)
 ├── Note color proportions
 └── Special: Detect patterns (stripes, prints)
+```
 
 P2 Shape and Segmentation
-
+```
 Full Image → Object Detection →
 ├── Identify main subject (dress, shoe, bag)
 ├── Separate from background
@@ -209,9 +210,10 @@ Full Image → Object Detection →
 │   ├── Hemline shape
 │   └── Overall silhouette
 └── Create shape descriptor
+```
 
 P3 Brand Recognition
-
+```
 Image Regions → Logo Detection →
 ├── Known Brand Matching
 │   ├── Compare against brand database
@@ -225,9 +227,10 @@ Image Regions → Logo Detection →
     ├── Stitching patterns
     ├── Hardware (zippers, buttons)
     └── Material texture
+```
 
 P4 Style Classification
-
+```
 Visual Features → Style Classifier →
 ├── Occasion
 │   ├── Formal/Office
@@ -249,18 +252,19 @@ Visual Features → Style Classifier →
     ├── Age group (inferred from style)
     ├── Gender presentation
     └── Cultural context
+```
 
 P5 Consolidate
 
 Based on all above steps, convert finding into a mathematical representation
-
+```
 All Features → Neural Network Encoder →
 ├── Combine color (128 dimensions)
 ├── Combine shape (256 dimensions)
 ├── Combine style (128 dimensions)
 ├── Combine brand (64 dimensions)
 └── Output: 512-dimensional vector
-
+```
 Imagine each product exists in a 512-dimensional space where:
 
 - Similar products cluster together
@@ -278,14 +282,14 @@ Blue Jeans: [0.1, 0.9, 0.2]
 **Step 3 Vector Similar Search**
 
 How 'find similar works'
-
+```
 Query Image Vector → Compare with Database →
 ├── Calculate distances to all products
 ├── Use approximate algorithms (for speed)
 ├── Rank by similarity score
 ├── Apply filters (price, availability)
 └── Return top 10-20 matches
-
+```
 Distance Calculation Methods:
 
 - Cosine Similarity: Direction matters more than magnitude
@@ -383,13 +387,14 @@ Indian Fashion Context:
 #### Advanced Techniques - Image based Brand Discovery
 
 1. Multi-Image Product Understanding (Instead of Single Image)
-
+```
 Product Page:
 ├── Hero image (overall look)
 ├── Detail shots (texture, pattern)
 ├── Scale reference (on model)
 ├── Color variations (all options)
 └── Styling suggestions (outfit ideas)
+```
 
 2. Hint Visual Similarity
    
