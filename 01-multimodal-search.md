@@ -354,6 +354,7 @@ Total: ~600ms from upload to results
 - Best: + lifestyle shots, size references, detail zooms
 
 2. Rich Visual Metadata
+```
 <!-- Not just alt text, but structured data -->
 <script type="application/ld+json">
 {
@@ -367,6 +368,7 @@ Total: ~600ms from upload to results
   }
 }
 </script>
+```
 
 3. Visual Consistency
 - Same product photographed consistently
@@ -397,11 +399,12 @@ Product Page:
 ```
 
 2. Hint Visual Similarity
-   
+```
 <!-- Help AI understand relationships -->
 <div data-similar-to="cocktail-dress,evening-gown"
      data-style-family="little-black-dress"
      data-occasion="formal,party,date-night">
+```
 
 3. Competitive Visual Positioning
 
