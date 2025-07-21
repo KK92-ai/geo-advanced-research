@@ -177,7 +177,7 @@ Let me break down this process even further because it powers visual shopping on
 
 User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
 
-Step 1 Pre-processing:
+**Step 1 Pre-processing**:
 ```
 Raw Image (2MB, 3000x4000px) →
 ├── Resize to 512x512 (standard for most models)
@@ -187,7 +187,7 @@ Raw Image (2MB, 3000x4000px) →
 └── Enhance contrast/brightness if too dark
 ```
 
-Step 2 Feature Extraction
+**Step 2 Feature Extraction**
 
 P1 Colour Histogram Analysis
 ```
@@ -428,8 +428,8 @@ The better your visual feature optimization, the more findable your products bec
 - Visual search traffic grew by about 35% year‑over‑year, significantly contributing to conversions and revenue per user 
 
 References 
-[1 - myntra chatgpt collab](https://www.livemint.com/companies/news/myntra-launches-chatgpt-powered-search-feature-for-enhanced-product-discovery-11684925699231.html?utm_source=chatgpt.com) 
-[2 - microsoft azure press release](https://news.microsoft.com/source/asia/features/indias-myntra-innovates-with-generative-ai-to-help-shoppers-put-the-right-look-together/?utm_source=chatgpt.com)
+- [1 - myntra chatgpt collab](https://www.livemint.com/companies/news/myntra-launches-chatgpt-powered-search-feature-for-enhanced-product-discovery-11684925699231.html?utm_source=chatgpt.com) 
+- [2 - microsoft azure press release](https://news.microsoft.com/source/asia/features/indias-myntra-innovates-with-generative-ai-to-help-shoppers-put-the-right-look-together/?utm_source=chatgpt.com)
 
 **Bottlenecks**:
 1. **Inventory mapping**: Lack of rich, structured, and labeled product metadata for clean retrieval.
@@ -1246,25 +1246,21 @@ AR-Ready:
 - "Unified-IO 2: Scaling Autoregressive Multimodal Models" (2024)
 
 **Tools**:
-- Google's Vision API Playground
-- Whisper API for voice processing
-- Pinecone for vector similarity
-- Gradio for multi-modal demos
+- [Google's Vision API Playground](https://cloud.google.com/vision)
+- Whisper API for voice processing [OpenAI Whisper](https://openai.com/index/whisper/)
+- Pinecone for [vector similarity](https://www.pinecone.io/)
+- Gradio for multi-modal demos [visit](http://gradio.app/guides/multimodal-chatbot-part1)
 
 ---
 
 ## Key Takeaways 
 
-1. **Multi-modal isn't optional** - It's already 40%+ of queries
-2. **Voice queries reveal true intent** - Optimize for conversation
-3. **Images bypass language barriers** - Critical for Indian markets
-4. **Video isn't ready** - Focus on images and audio
-5. **Cross-modal linking is the future** - Start building now
-6. **Platform differences matter** - Optimize specifically
-7. **Privacy concerns are real** - Build trust explicitly
-8. **Regional bias needs addressing** - Localize everything
-9. **Speed beats complexity** - Fast + good enough wins
-10. **The future is adaptive** - Build flexible frameworks
+1. **Multi-modal isn't optional** 
+2. **Voice queries** - Optimize for conversation
+3. **Images bypass language barriers** - Critical for Indian (or non English speaking) markets
+4. **Video isn't ready due to compute and scale issues** 
+5. **Cross-modal linking is the future** 
+
 
 
 
