@@ -1,4 +1,3 @@
-
 # 1: Multi-Modal Search - Deep Dive
 *Advanced GEO Research*
 
@@ -13,7 +12,7 @@ Research Outline:
 2. Critical bottlenecks preventing multi-modal adoption at scale
 3. How LLMs decide output modality and process mixed inputs
 4. Advanced optimization strategies 
-5.Progression toward agentic web experiences
+5. Progression toward agentic web experiences
 
 ---
 
@@ -123,6 +122,7 @@ Core: Shopping starts with an idea - like I am going to Goa on the weekend. The 
 
 When it comes to fashion ecommerce, searching for products has been very similar to searching for any other piece of information online. You try a set of keywords and keep refining your search with different keywords and preset filters. 
 A search for a branded, blue t-shirt works well because the keywords are already part of the product catalog. But that’s not always how people shop in the real world. Some shoppers only have a vague idea what they want. For instance, clothes for an upcoming vacation or a music concert.
+
 The conventional method of searching by keywords fails spectacularly when it comes to the second kind of customer as the search strings they use are not retrievable directly from the information stored in the product catalog.
 
 **ChatGPT Shopping Integration**:
@@ -168,6 +168,111 @@ Product Image → Feature Extraction
 ├── Style classification
 └── Similar product embedding → Vector similarity search
 ```
+
+Let me break down this process even further because it powers visual shopping on platforms like ChatGPT's shopping integration and Google Lens. 
+
+#### **Visual Search Flow**:
+
+User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
+
+**Step 1 Pre-processing**:
+
+Raw Image (2MB, 3000x4000px) → 
+├── Resize to 512x512 (standard for most models)
+├── Normalize pixel values (0-255 → 0-1)
+├── Remove EXIF data (privacy)
+├── Auto-rotate if needed
+└── Enhance contrast/brightness if too dark
+
+**Step 2 Feature Extraction**
+
+- P1 Colour Histogram Analysis 
+
+Image → Divide into color channels (R,G,B) → 
+├── Count pixels in each color range
+├── Create distribution graph
+├── Identify dominant colors (top 3-5)
+├── Note color proportions
+└── Special: Detect patterns (stripes, prints)
+
+- P2 Shape and Segmentation
+
+Full Image → Object Detection → 
+├── Identify main subject (dress, shoe, bag)
+├── Separate from background
+├── Detect structural elements
+│   ├── Neckline type (for clothing)
+│   ├── Sleeve length
+│   ├── Hemline shape
+│   └── Overall silhouette
+└── Create shape descriptor
+
+- P3 Brand Recognition
+
+Image Regions → Logo Detection → 
+├── Known Brand Matching
+│   ├── Compare against brand database
+│   ├── Check logo placement rules
+│   └── Confidence scoring
+├── Text Recognition (OCR)
+│   ├── Brand names on tags
+│   ├── Product labels
+│   └── Care instructions
+└── Authenticity Signals
+    ├── Stitching patterns
+    ├── Hardware (zippers, buttons)
+    └── Material texture
+
+- P4 Style Classification
+
+Visual Features → Style Classifier → 
+├── Occasion
+│   ├── Formal/Office
+│   ├── Casual/Daily
+│   ├── Party/Evening
+│   ├── Traditional/Ethnic
+│   └── Sports/Active
+├── Aesthetic Style
+│   ├── Minimalist
+│   ├── Bohemian
+│   ├── Classic
+│   ├── Trendy/Fashion-forward
+│   └── Traditional
+├── Season
+│   ├── Summer (light colors, breathable)
+│   ├── Winter (layers, dark tones)
+│   └── All-season
+└── Target Demographics
+    ├── Age group (inferred from style)
+    ├── Gender presentation
+    └── Cultural context
+
+- P5 Consolidate
+
+Based on all above steps, convert finding into a mathematical representation 
+
+All Features → Neural Network Encoder → 
+├── Combine color (128 dimensions)
+├── Combine shape (256 dimensions)
+├── Combine style (128 dimensions)
+├── Combine brand (64 dimensions)
+└── Output: 512-dimensional vector
+
+Imagine each product exists in a 512-dimensional space where:
+
+- Similar products cluster together
+- Distance = similarity
+- Can find "neighbors" quickly
+
+Example of Vector
+
+Red Saree: [0.8, 0.2, 0.9] 
+(high traditional, low casual, high formal)
+
+Blue Jeans: [0.1, 0.9, 0.2]
+(low traditional, high casual, low formal)
+
+**Step 3 Vector Similar Search**
 
 **Case Study: Myntra and ChatGPT**
 
