@@ -178,13 +178,14 @@ Let me break down this process even further because it powers visual shopping on
 User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
 
 Step 1 Pre-processing:
-
+```
 Raw Image (2MB, 3000x4000px) →
 ├── Resize to 512x512 (standard for most models)
 ├── Normalize pixel values (0-255 → 0-1)
 ├── Remove EXIF data (privacy)
 ├── Auto-rotate if needed
 └── Enhance contrast/brightness if too dark
+```
 
 Step 2 Feature Extraction
 
