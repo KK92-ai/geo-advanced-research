@@ -376,7 +376,8 @@ Total: ~600ms from upload to results
 - Consistent lighting and background
 - Helps AI recognize as same product
 
-4.Cultural Context Training
+4. Cultural Context Training
+
 Western Fashion Model:
 - Trained on Pinterest, Instagram
 - Recognizes "boho", "minimalist"
@@ -413,9 +414,7 @@ Product Page:
 - Create distinct visual signature
 - Optimize for "different but similar" searches
 
-In visual search, the image IS the query. Every pixel carries information that could match or mismatch user intent.
- 
-The better your visual feature optimization, the more findable your products become in this new paradigm.
+In visual search, the image IS the query. Every pixel carries information that could match or mismatch user intent. The better your visual feature optimization, the more findable your products become in this new paradigm.
 
 ## Next Section
 
