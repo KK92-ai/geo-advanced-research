@@ -174,39 +174,33 @@ Product Image → Feature Extraction
 
 Let me break down this process even further because it powers visual shopping on platforms like ChatGPT's shopping integration and Google Lens.
 
+#### **Visual Search Flow**:
 
-```
 User's Photo → Pre-processing → Feature Extraction → Vector Embedding → Similarity Search → Results
-```
 
-## Step 1: Pre-processing
+**Step 1 Pre-processing**:
 
-```
-Raw Image (2MB, 3000x4000px) → 
+Raw Image (2MB, 3000x4000px) →
 ├── Resize to 512x512 (standard for most models)
 ├── Normalize pixel values (0-255 → 0-1)
 ├── Remove EXIF data (privacy)
 ├── Auto-rotate if needed
 └── Enhance contrast/brightness if too dark
-```
 
-## Step 2: Feature Extraction
+**Step 2 Feature Extraction**
 
-### P1: Colour Histogram Analysis 
+P1 Colour Histogram Analysis
 
-```
-Image → Divide into color channels (R,G,B) → 
+Image → Divide into color channels (R,G,B) →
 ├── Count pixels in each color range
 ├── Create distribution graph
 ├── Identify dominant colors (top 3-5)
 ├── Note color proportions
 └── Special: Detect patterns (stripes, prints)
-```
 
-### P2: Shape and Segmentation
+P2 Shape and Segmentation
 
-```
-Full Image → Object Detection → 
+Full Image → Object Detection →
 ├── Identify main subject (dress, shoe, bag)
 ├── Separate from background
 ├── Detect structural elements
@@ -215,12 +209,10 @@ Full Image → Object Detection →
 │   ├── Hemline shape
 │   └── Overall silhouette
 └── Create shape descriptor
-```
 
-### P3: Brand Recognition
+P3 Brand Recognition
 
-```
-Image Regions → Logo Detection → 
+Image Regions → Logo Detection →
 ├── Known Brand Matching
 │   ├── Compare against brand database
 │   ├── Check logo placement rules
@@ -233,12 +225,10 @@ Image Regions → Logo Detection →
     ├── Stitching patterns
     ├── Hardware (zippers, buttons)
     └── Material texture
-```
 
-### P4: Style Classification
+P4 Style Classification
 
-```
-Visual Features → Style Classifier → 
+Visual Features → Style Classifier →
 ├── Occasion
 │   ├── Formal/Office
 │   ├── Casual/Daily
@@ -259,20 +249,17 @@ Visual Features → Style Classifier →
     ├── Age group (inferred from style)
     ├── Gender presentation
     └── Cultural context
-```
 
-### P5: Consolidate
+P5 Consolidate
 
-Based on all above steps, convert finding into a mathematical representation 
+Based on all above steps, convert finding into a mathematical representation
 
-```
-All Features → Neural Network Encoder → 
+All Features → Neural Network Encoder →
 ├── Combine color (128 dimensions)
 ├── Combine shape (256 dimensions)
 ├── Combine style (128 dimensions)
 ├── Combine brand (64 dimensions)
 └── Output: 512-dimensional vector
-```
 
 Imagine each product exists in a 512-dimensional space where:
 
@@ -280,36 +267,32 @@ Imagine each product exists in a 512-dimensional space where:
 - Distance = similarity
 - Can find "neighbors" quickly
 
-**Example of Vector**
+Example of Vector
 
-```
-Red Saree: [0.8, 0.2, 0.9] 
+Red Saree: [0.8, 0.2, 0.9]
 (high traditional, low casual, high formal)
 
 Blue Jeans: [0.1, 0.9, 0.2]
 (low traditional, high casual, low formal)
-```
 
-## Step 3: Vector Similar Search
+**Step 3 Vector Similar Search**
 
-### How 'find similar works'
+How 'find similar works'
 
-```
-Query Image Vector → Compare with Database → 
+Query Image Vector → Compare with Database →
 ├── Calculate distances to all products
 ├── Use approximate algorithms (for speed)
 ├── Rank by similarity score
 ├── Apply filters (price, availability)
 └── Return top 10-20 matches
-```
 
-**Distance Calculation Methods:**
+Distance Calculation Methods:
 
-- **Cosine Similarity**: Direction matters more than magnitude
-- **Euclidean Distance**: Actual distance in space
-- **Weighted Hybrid**: Different importance for different features
+- Cosine Similarity: Direction matters more than magnitude
+- Euclidean Distance: Actual distance in space
+- Weighted Hybrid: Different importance for different features
 
-**Example**
+Example
 
 User uploads: Floral summer dress photo
 
@@ -319,9 +302,8 @@ System finds:
 3. Same print, different style: 0.85 similarity
 4. Similar vibe, different brand: 0.82 similarity
 
-## Complete Flow Timeline
+So this is how the flow works
 
-```
 1. Image Upload (0ms)
    User: Photo of friend's handbag
 
@@ -359,18 +341,15 @@ System finds:
    "Why matched" explanations
 
 Total: ~600ms from upload to results
-```
 
-## Basic Playbook for Image Based Brand Discovery:
+#### Basic playbook for image based brand discovery:
 
-### 1. Optimize Your Product Images
-- **Bad**: Single angle, poor lighting, cluttered background
-- **Good**: Multiple angles, clear lighting, isolated product
-- **Best**: + lifestyle shots, size references, detail zooms
+1. Optimize Your Product Images
+- Bad: Single angle, poor lighting, cluttered background
+- Good: Multiple angles, clear lighting, isolated product
+- Best: + lifestyle shots, size references, detail zooms
 
-### 2. Rich Visual Metadata
-
-```html
+2. Rich Visual Metadata
 <!-- Not just alt text, but structured data -->
 <script type="application/ld+json">
 {
@@ -384,59 +363,51 @@ Total: ~600ms from upload to results
   }
 }
 </script>
-```
 
-### 3. Visual Consistency
+3. Visual Consistency
 - Same product photographed consistently
 - Standard angles (front, back, side, detail)
 - Consistent lighting and background
 - Helps AI recognize as same product
 
-### 4. Cultural Context Training
-
-**Western Fashion Model:**
+4.Cultural Context Training
+Western Fashion Model:
 - Trained on Pinterest, Instagram
 - Recognizes "boho", "minimalist"
 
-**Indian Fashion Context:**
+Indian Fashion Context:
 - Needs "lehenga", "anarkali" understanding
 - Occasion mapping (mehendi, sangeet)
 - Regional style variations
 
-## Advanced Practices
+Advanced practices
 
-### 1. Multi-Image Product Understanding (Instead of Single Image)
+1. Multi-Image Product Understanding (Instead of Single Image)
 
-```
 Product Page:
 ├── Hero image (overall look)
 ├── Detail shots (texture, pattern)
 ├── Scale reference (on model)
 ├── Color variations (all options)
 └── Styling suggestions (outfit ideas)
-```
 
-### 2. Hint Visual Similarity
+2. Hint Visual Similarity
    
-```html
 <!-- Help AI understand relationships -->
 <div data-similar-to="cocktail-dress,evening-gown"
      data-style-family="little-black-dress"
      data-occasion="formal,party,date-night">
-```
 
-### 3. Competitive Visual Positioning
+3. Competitive Visual Positioning
 
 - Analyze competitor product images
 - Identify visual gaps
 - Create distinct visual signature
 - Optimize for "different but similar" searches
 
----
-
-In visual search, the image IS the query. Every pixel carries information that could match or mismatch user intent. 
+In visual search, the image IS the query. Every pixel carries information that could match or mismatch user intent.
+ 
 The better your visual feature optimization, the more findable your products become in this new paradigm.
-```
 
 **Case Study: Myntra and ChatGPT**
 
