@@ -59,7 +59,7 @@ Audio Input → Audio Spectrogram Transformer
 └── Creates "audio tokens"
 
 Text Input → Standard Tokenization
-└── Regular text tokens (as you learned in NLP)
+└── Regular text tokens
 ```
 
 **Stage 2: Cross-Modal Attention**
@@ -89,37 +89,16 @@ elif complexity_score > threshold:
     return multi_modal_response()
 ```
 
-**Real Factors in Modality Selection**:
+**Factors in Modality Selection**:
 1. **Query intent signals**: "show" → visual, "explain" → text
 2. **Content availability**: Does training data have relevant images?
 3. **Computational budget**: Images cost more tokens
 4. **User history**: Previous interactions influence selection
 5. **Platform constraints**: API vs ChatGPT interface capabilities
 
-### 1.3 What's Actually Happening (July 2025)
+### 1.3 Image Gen-AI
 
-#### Voice Search (Mobile)
-
-**Technical Implementation**:
-```
-Voice Input → Whisper ASR → Text → LLM Processing
-                ↓
-    Prosody Analysis → Emotion/Intent Layer
-```
-
-**Why Voice Works**:
-1. Whisper (OpenAI's ASR) has 95%+ accuracy
-2. Natural for mobile use cases
-3. Preserves conversational context
-4. Low computational overhead
-
-**Adoption Problems**:
-- Accent bias (30% lower accuracy for Indian English)
-- Background noise degradation
-- No emotion preservation in transcription
-- Lost non-verbal cues
-
-#### Image Search: E-commerce Game Changer
+#### Image Search for E-commerce 
 
 Core: Shopping starts with an idea - like I am going to Goa on the weekend. The conventional search is only equipped to help with catalogue keywords. 
 
@@ -449,42 +428,10 @@ References
 | User Experience     | Trust, personalization, explainability |
 | Governance          | Privacy, bias, transparency            |
 
-#### Video Hasn't Taken Off
-
-**Limitations**:
-1. **Computational Cost**: 
-   - Image: ~500 tokens
-   - 30-second video: ~15,000 tokens
-   - Cost prohibitive for most queries
-
-2. **Processing Architecture**:
-   ```
-   Video → Frame Sampling (1fps) → Individual Frame Analysis → 
-   Temporal Reasoning → Massive computational overhead
-   ```
-
-3. **Storage & Bandwidth**:
-   - Video embeddings are 100x larger than text
-   - Real-time processing impossible on current infrastructure
-
-4. **User Behavior Mismatch**:
-   - Users expect instant responses
-   - Video processing takes 10-30 seconds
-   - Breaks conversational flow
-
-**Where Video Does Work**:
-- Pre-processed educational content
-- Static demonstrations
-- Closed captions + keyframe approach
 
 ### 1.4 Web Agents & Multi-Modal Integration
 
-#### The New Paradigm: Agentic Browsers
-
-**Current Examples**:
-- **Claude Computer Use**: Can see and interact with screen
-- **OpenAI Browser Agent** (rumored for August 2025)
-- **Perplexity Pages**: Multi-modal content generation
+#### Agentic Browsers
 
 **How Browser Agents Change Multi-Modal**:
 ```
