@@ -398,9 +398,9 @@ Product Page:
 
 In visual search, the image IS the query. Every pixel carries information that could match or mismatch user intent. The better your visual feature optimization, the more findable your products become in this new paradigm.
 
-## Next Section
+## Case Study
 
-**Case Study: Myntra and ChatGPT**
+**Myntra and ChatGPT**
 
 - Myntra launched a ChatGPT‑powered assistant called MyFashionGPT in May 2023. 
 - It enables shoppers to input natural-language queries—like “what can I wear for a beach wedding in Jaipur”—and returns up to six curated outfit options across multiple categories (tops, footwear, accessories, etc.) 
@@ -462,12 +462,12 @@ Agentic: User → "Find me this product online" →
 **Text Hallucination**: Model makes up facts
 **Visual Hallucination**: Model "sees" things that aren't there
 
-**Real Example**: 
+**Example**: 
 - Show image of regular phone
 - Ask about "the crack on screen"
 - Model might describe non-existent crack
 
-**Why This Happens**:
+**Why This Happens?**:
 - Training data bias (many broken phone images)
 - Leading questions influence perception
 - Cross-modal attention can create false associations
@@ -680,7 +680,7 @@ Delivery photo → "Is this genuine?"
 
 **Instagram → ChatGPT Flow**:
 - x% of fashion discoveries start on Instagram. Screenshot → ChatGPT for finding/buying (Find stats to validate hypothesis)
-- Users trust AI more than influencer links? Validate research
+- Users trust AI more than influencer links? Validate research?
 
 **Pinterest → AI Shopping**:
 - Mood boards → "Find me this aesthetic"
