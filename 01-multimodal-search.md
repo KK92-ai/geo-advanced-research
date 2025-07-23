@@ -17,6 +17,12 @@ Research Outline:
 4. Advanced optimization strategies 
 5. Progression toward agentic web experiences
 
+Objective:
+- Practical e-commerce applications: GTM related insights
+- Indian market cultural context: Moat and differentiator 
+- Technical depth in multi-modal systems: Foundational knowledge
+- Business optimization focus (GEO): Applied research, use case
+
 ---
 
 ## Part 1: Base Foundation
